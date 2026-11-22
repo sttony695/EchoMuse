@@ -107,6 +107,18 @@ options:
   # Who answers the Echoes: esphome (Home Assistant's Assist, through the
   # ESPHome satellites) or ai (the controller itself, em_ai.py).
   voice_backend: "esphome"
+  # The AI backend's speech servers (Wyoming, tcp://host:port), chat API
+  # (OpenAI-compatible base URL, model, key) and reply settings. Used only
+  # with voice_backend: ai.
+  ai_stt_uri: ""
+  ai_stt_language: "en"
+  ai_tts_uri: ""
+  ai_tts_voice: ""
+  ai_llm_url: ""
+  ai_llm_model: ""
+  ai_llm_key: ""
+  ai_system_prompt: ""
+  ai_max_tokens: 300
 schema:
   server_host: "str"
   server_port: "int(1,65535)"
@@ -124,3 +136,12 @@ schema:
   extra_ca_cert: "str?"
   tts_wait_timeout: "int(5,120)"
   voice_backend: "list(esphome|ai)"
+  ai_stt_uri: "str?"
+  ai_stt_language: "str?"
+  ai_tts_uri: "str?"
+  ai_tts_voice: "str?"
+  ai_llm_url: "str?"
+  ai_llm_model: "str?"
+  ai_llm_key: "password?"
+  ai_system_prompt: "str?"
+  ai_max_tokens: "int(16,4000)"

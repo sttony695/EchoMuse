@@ -46,6 +46,15 @@ OPTION_ENV_VARS = {
     "extra_ca_cert": "EM_EXTRA_CA_CERT",
     "tts_wait_timeout": "EM_TTS_WAIT_TIMEOUT",
     "voice_backend": "VOICE_BACKEND",
+    "ai_stt_uri": "AI_STT_URI",
+    "ai_stt_language": "AI_STT_LANGUAGE",
+    "ai_tts_uri": "AI_TTS_URI",
+    "ai_tts_voice": "AI_TTS_VOICE",
+    "ai_llm_url": "AI_LLM_URL",
+    "ai_llm_model": "AI_LLM_MODEL",
+    "ai_llm_key": "AI_LLM_KEY",
+    "ai_system_prompt": "AI_SYSTEM_PROMPT",
+    "ai_max_tokens": "AI_MAX_TOKENS",
 }
 
 if OPTIONS_PATH.is_file():

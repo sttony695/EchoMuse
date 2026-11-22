@@ -169,6 +169,8 @@ COPY em_rttlog.py .
 COPY em_esphome.py .
 COPY em_voice.py .
 COPY em_ai.py .
+COPY em_llm.py .
+COPY em_wyoming.py .
 COPY em_ble_health.py .
 COPY em_config_types.py .
 COPY em_dbwriter.py .

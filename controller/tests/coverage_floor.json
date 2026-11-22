@@ -42,6 +42,7 @@
  "em_limiter.py": 90.0,
  "em_linkauth.py": 99.0,
  "em_listen.py": 95.0,
+ "em_llm.py": 90.0,
  "em_loglevel.py": 97.0,
  "em_mbc.py": 99.0,
  "em_ns.py": 58.0,
@@ -100,5 +101,6 @@
  "em_wakeword.py": 99.0,
  "em_wav.py": 95.0,
  "em_wifi.py": 99.0,
- "em_wsclose.py": 99.0
+ "em_wsclose.py": 99.0,
+ "em_wyoming.py": 88.0
 }

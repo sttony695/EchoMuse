@@ -111,3 +111,47 @@ configuration:
       Home Assistant's Assist answers. ai has the controller answer itself,
       with its own speech recognition, language model and voice, and no
       Home Assistant.
+  ai_stt_uri:
+    name: AI speech recognition server
+    description: >-
+      A Wyoming speech-to-text server, such as Whisper, as tcp://host:port.
+      Used only with the ai voice backend.
+  ai_stt_language:
+    name: AI speech language
+    description: >-
+      Language code for speech recognition, such as en or de. Leave blank to
+      let the server detect it.
+  ai_tts_uri:
+    name: AI voice server
+    description: >-
+      A Wyoming text-to-speech server, such as Piper or Kokoro, as
+      tcp://host:port. Used only with the ai voice backend.
+  ai_tts_voice:
+    name: AI voice
+    description: >-
+      The voice to speak with, by the server's name for it. Leave blank for
+      the server's default voice.
+  ai_llm_url:
+    name: AI chat API URL
+    description: >-
+      The base URL of an OpenAI-compatible chat API, ending in /v1, such as
+      OpenAI, OpenRouter, Ollama or LM Studio.
+  ai_llm_model:
+    name: AI model
+    description: >-
+      The model to ask, by that API's name for it.
+  ai_llm_key:
+    name: AI API key
+    description: >-
+      The chat API's key, if it needs one.
+  ai_system_prompt:
+    name: AI instructions
+    description: >-
+      What the model is told before every conversation. Leave blank for a
+      built-in voice-assistant prompt. The current date and time are always
+      added.
+  ai_max_tokens:
+    name: AI longest reply (tokens)
+    description: >-
+      The most the model may say in one reply. Spoken replies should be
+      short.

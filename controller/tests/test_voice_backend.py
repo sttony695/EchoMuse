@@ -142,13 +142,22 @@ def test_ai_forwards_to_em_ai(monkeypatch):
 
 # ── the AI backend before its pipeline exists ───────────────────────────────
 
-def test_ai_serves_no_turn_yet():
+def test_ai_serves_no_turn_until_configured(monkeypatch):
     import em_ai
+    for name in ("STT_URI", "TTS_URI", "LLM_URL", "LLM_MODEL"):
+        monkeypatch.setattr(em_ai, name, "")
     assert em_ai.can_serve_turn("G090LF0000000001") is False
+    monkeypatch.setattr(em_ai, "STT_URI", "tcp://stt:10300")
+    monkeypatch.setattr(em_ai, "TTS_URI", "tcp://tts:10200")
+    monkeypatch.setattr(em_ai, "LLM_URL", "http://llm/v1")
+    assert em_ai.missing_settings() == ["AI_LLM_MODEL"]
+    monkeypatch.setattr(em_ai, "LLM_MODEL", "m")
+    assert em_ai.can_serve_turn("G090LF0000000001") is True
 
 
-def test_ai_turn_is_recorded_as_dropped(monkeypatch):
+def test_an_unconfigured_ai_turn_is_recorded_as_dropped(monkeypatch):
     import em_ai
+    monkeypatch.setattr(em_ai, "LLM_MODEL", "")
     dropped = []
 
     async def record(device, label, wake_info):
