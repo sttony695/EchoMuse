@@ -118,6 +118,9 @@ options:
   # goes idle while the controller is still waiting, which is the same silent
   # failure from the other side.
   tts_wait_timeout: 30
+  # Who answers the Echoes: esphome (Home Assistant's Assist, through the
+  # ESPHome satellites) or ai (the controller itself, em_ai.py).
+  voice_backend: "esphome"
 schema:
   server_host: "str"
   server_port: "int(1,65535)"
@@ -134,3 +137,4 @@ schema:
   log_levels: "str"
   extra_ca_cert: "str?"
   tts_wait_timeout: "int(5,120)"
+  voice_backend: "list(esphome|ai)"

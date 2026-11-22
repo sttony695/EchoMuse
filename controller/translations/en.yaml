@@ -104,3 +104,10 @@ configuration:
       silent — no audio and no error, which looks like a deaf Echo. Above
       120 is not accepted, because the ring stops showing that the Echo is
       working at 135 seconds.
+  voice_backend:
+    name: Voice backend
+    description: >-
+      Who answers the Echoes. esphome makes each Echo a voice satellite that
+      Home Assistant's Assist answers. ai has the controller answer itself,
+      with its own speech recognition, language model and voice, and no
+      Home Assistant.

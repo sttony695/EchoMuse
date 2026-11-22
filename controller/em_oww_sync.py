@@ -20,7 +20,7 @@ import logging
 
 import em_config_types
 import em_db as db
-import em_esphome
+import em_voice as em_esphome  # em_esphome or em_ai, by VOICE_BACKEND
 import em_events
 import em_oww_assets
 import em_ota

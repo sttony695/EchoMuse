@@ -1,4 +1,5 @@
 {
+ "em_ai.py": 83.0,
  "em_announce.py": 99.0,
  "em_api.py": 53.0,
  "em_arbiter.py": 99.0,
@@ -92,6 +93,7 @@
  "em_tts_audio.py": 10.0,
  "em_turn_record.py": 30.0,
  "em_turnclock.py": 99.0,
+ "em_voice.py": 99.0,
  "em_volume.py": 99.0,
  "em_wake_samples.py": 85.0,
  "em_wakelevel.py": 99.0,

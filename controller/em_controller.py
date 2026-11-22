@@ -114,7 +114,7 @@ import em_wakelevel
 import em_button
 import em_wakeword
 import em_tap_burst
-import em_esphome as esphome
+import em_voice as esphome  # em_esphome or em_ai, by VOICE_BACKEND
 import em_ble_proxy
 import em_oww_models
 import em_player

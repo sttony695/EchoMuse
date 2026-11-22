@@ -16,7 +16,7 @@ import em_config_sections as sections_mod
 import em_db as db
 import em_emos_ota
 import em_emos_update
-import em_esphome
+import em_voice as em_esphome  # em_esphome or em_ai, by VOICE_BACKEND
 import em_health
 import em_ota
 import em_pairing
